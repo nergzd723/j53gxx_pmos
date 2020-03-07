@@ -37,7 +37,7 @@
 #include <linux/uaccess.h>
 #include <linux/proc_fs.h>
 #include <linux/sec_param.h>
-#include <linux/FseF.h>
+#include <linux/sec_debug.h>
 #include <mach/msm_iomap.h>
 #include <linux/of_address.h>
 #ifdef CONFIG_SEC_DEBUG_LOW_LOG
