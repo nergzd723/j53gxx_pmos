@@ -3,9 +3,9 @@
 #
 ccflags-$(CONFIG_USB_GADGET_DEBUG) := -DDEBUG
 
-obj-$(CONFIG_USB_GADGET)	+= udc-core.o
-obj-$(CONFIG_USB_GADGET)	+= f_gsi.o
-obj-$(CONFIG_USB_GADGET)	+= u_ncm.o
+obj-$(CONFIG_USB_GADGET)	+= udc-core.o #f_gsi.o u_ncm.o
+obj-$(CONFIG_USB_GADGET)	:= f_gsi.o
+obj-$(CONFIG_USB_GADGET)	:= u_ncm.o
 obj-$(CONFIG_USB_LIBCOMPOSITE)	+= libcomposite.o
 libcomposite-y			:= usbstring.o config.o epautoconf.o
 libcomposite-y			+= composite.o functions.o configfs.o
