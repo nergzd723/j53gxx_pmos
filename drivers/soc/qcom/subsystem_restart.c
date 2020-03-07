@@ -965,7 +965,7 @@ int subsystem_restart_dev(struct subsys_device *dev)
 		 * We should guarantee time the App needs for saving logs
 		 * as well, so we use a delayed workqueue.
 		 */
-		if(silent_log_panic_handler())
+		if(/*silent_log_panic_handler()*/0)
 			schedule_delayed_work(&dev->device_restart_delayed_work,
 				msecs_to_jiffies(300));
 		else
