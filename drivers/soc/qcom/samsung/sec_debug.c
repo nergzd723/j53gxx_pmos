@@ -37,7 +37,7 @@
 #include <linux/uaccess.h>
 #include <linux/proc_fs.h>
 #include <linux/sec_param.h>
-#include <linux/sec_debug.h>
+#include <linux/FseF.h>
 #include <mach/msm_iomap.h>
 #include <linux/of_address.h>
 #ifdef CONFIG_SEC_DEBUG_LOW_LOG
@@ -1953,7 +1953,7 @@ int sec_debug_subsys_init(void)
 		&secdbg_krait->log.next_idx_paddr,
 		&secdbg_krait->log.log_paddr, &secdbg_krait->log.size);
 /* To-Do Temporarily Disable */
-	sec_debug_subsys_set_logger_info(&secdbg_krait->logger_log);
+	//sec_debug_subsys_set_logger_info(&secdbg_krait->logger_log);
 
 	secdbg_krait->tz_core_dump =
 		(struct tzbsp_dump_buf_s **)get_wdog_regsave_paddr();
